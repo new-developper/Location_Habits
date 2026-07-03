@@ -1,0 +1,307 @@
+/* ==========================
+   STYLE GENERAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#eef2f7,#dce8ff);
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header{
+    width:100%;
+    background:linear-gradient(90deg,#2575fc,#6a11cb);
+    color:white;
+    text-align:center;
+    padding:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+header h1{
+    font-size:30px;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+nav{
+    width:25%;
+    float:left;
+    min-height:600px;
+    background:white;
+    padding:25px;
+    box-shadow:3px 0 10px rgba(0,0,0,.1);
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    margin-bottom:20px;
+}
+
+nav a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2575fc,#6a11cb);
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    transform:translateX(8px);
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   CONTENU
+========================== */
+
+section{
+    width:75%;
+    float:left;
+    padding:20px;
+}
+
+iframe{
+    width:100%;
+    height:560px;
+    border:none;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    clear:both;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:18px;
+}
+
+/* ==========================
+   FORMULAIRES
+========================== */
+
+fieldset{
+    width:80%;
+    margin:30px auto;
+    background:white;
+    border:none;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+legend{
+    color:#2575fc;
+    font-size:24px;
+    font-weight:bold;
+    padding:10px;
+}
+
+/* Labels principaux */
+label{
+    display:inline-block;
+    width:170px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* Labels des boutons radio */
+input[type="radio"] + label{
+    width:auto;
+    margin-right:20px;
+    font-weight:normal;
+}
+
+input[type="text"],
+input[type="number"],
+select{
+    width:280px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus{
+    outline:none;
+    border-color:#2575fc;
+    box-shadow:0 0 10px rgba(37,117,252,.3);
+}
+
+input[type="radio"]{
+    margin-left:10px;
+    margin-right:5px;
+    transform:scale(1.2);
+}
+
+/* ==========================
+   BOUTONS
+========================== */
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"]{
+    padding:12px 30px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+input[type="button"],
+input[type="submit"]{
+    background:linear-gradient(135deg,#2575fc,#6a11cb);
+    color:white;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+input[type="reset"]{
+    background:#e74c3c;
+    color:white;
+}
+
+input[type="reset"]:hover{
+    background:#c0392b;
+    transform:scale(1.05);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+nav{
+    width:100%;
+    min-height:auto;
+}
+
+section{
+    width:100%;
+}
+
+iframe{
+    height:500px;
+}
+
+fieldset{
+    width:95%;
+}
+
+label{
+    display:block;
+    width:auto;
+    margin-bottom:5px;
+}
+
+input[type="radio"] + label{
+    display:inline;
+}
+
+input[type="text"],
+input[type="number"],
+select{
+    width:100%;
+}
+
+}
+/*les images */
+.gallery {
+  padding: 20px;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* carte */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* image */
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* zoom image */
+.card:hover img {
+  transform: scale(1.15);
+}
+
+/* zone info cachée */
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  text-align: center;
+}
+
+/* affichage au hover */
+.card:hover .info {
+  transform: translateY(0);
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ffd700;
+}

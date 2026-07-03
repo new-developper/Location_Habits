@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mesStyles.css" />
+    <script src="controles.js"></script>
+  </head>
+  <body>
+    <fieldset>
+      <form action="">
+        <legend>Ajout d un habit</legend>
+        <label for="">categorie</label>
+        <select id="sel">
+          <option value="">slectionner une catégorie</option>
+          <option value="">robe de soireé</option>
+          <option value="">robe de marieé</option>
+          <option value="">caftan</option>
+          <option value="">costume</option>
+          <option value="">jebba</option></select
+        ><br /><br />
+        <label for="">description</label>
+        <input type="text" id="t1" /><br /><br />
+        <label for="">taille</label>
+        <input type="radio" id="r1" />
+        <label for="">S</label>
+        <input type="radio" id="r2" />
+        <label for="">M</label>
+        <input type="radio" id="r3" />
+        <label for="">L</label>
+        <input type="radio" id="r4" />
+        <label for="">XL</label><br /><br />
+        <label for="">Prix de location </label>
+        <input type="number" id="t2" /><label for="">DT</label><br /><br />
+        <input type="reset" value="Annuler" />
+        <input type="button" value="Ajouter" onclick="verif1()" />
+      </form>
+    </fieldset>
+  </body>
+</html>
